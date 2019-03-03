@@ -1,6 +1,6 @@
 package com.xumou.project.em.mapper;
 
-public interface TestMapper {
+public interface TestMapper{
 	
 	int selectDual();
 	
