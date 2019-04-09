@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Boot</title>
+    <script src="js/jquery.js"></script>
+    <script>
+        function boot(){
+            $.get("http://localhost:9998/test1", function(d){
+                console.info(d);
+            })
+            $.post("http://localhost:9998/test3", function(d){
+                console.info(d);
+            })
+        }
+    </script>
+</head>
+<body>
+<button onclick="boot()">boot</button>
+</body>
+</html>

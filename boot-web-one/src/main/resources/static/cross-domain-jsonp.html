@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Jsonp测试</title>
+<script type="text/javascript">
+    // 通过jsonp方式只能get请求
+	function jsonp(url, func) {
+		var sc = document.createElement("script");
+		sc.setAttribute("src", url);
+		document.getElementsByTagName("head")[0].appendChild(sc);
+		sc.parentElement.removeChild(sc);
+		abc = func;
+	}
+	jsonp("http://localhost:9998/test1", function(data){
+		alert(data);
+	});
+	jsonp("http://localhost:9998/test2", function(data){
+		alert(data);
+	});
+	jsonp("http://localhost:9998/test3", function(data){
+		alert(data);
+	});
+</script>
+
+</head>
+<body>
+
+</body>
+</html>
